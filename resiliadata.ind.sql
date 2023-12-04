@@ -18,7 +18,8 @@ create table tecnologias (
    
 create table colaboradores (
     id_colaborador int not null primary key auto_increment,
-    nome  varchar(100) not null
+    nome  varchar(100) not null,
+    cargo varchar(70) not null
     );    
    
 create table tecnologias_empresas (
@@ -60,8 +61,8 @@ INSERT INTO areas(id_area, nome) VALUES (2 ,'dados');
 INSERT INTO tecnologias(id_tecnologia, nome, id_area) VALUES (1 ,' JavaScript', 1);
 INSERT INTO tecnologias(id_tecnologia, nome, id_area) VALUES (2 ,'MySQL', 2);
 
-INSERT INTO colaboradores(id_colaborador, nome, id_empresa) VALUES (1 ,'Andre Moraes', 1);
-INSERT INTO colaboradores(id_colaborador, nome, id_empresa) VALUES (2 ,'Angela Silva', 2);
+INSERT INTO colaboradores(id_colaborador, nome, cargo, id_empresa) VALUES (1 ,'Andre Moraes', 'analista de dados', 1);
+INSERT INTO colaboradores(id_colaborador, nome, cargo, id_empresa) VALUES (2 ,'Angela Silva', 'gerente administrativo', 2);
 
 INSERT INTO tecnologias_empresas(id_empresa, id_tecnologia) VALUES (1 , 1);
 INSERT INTO tecnologias_empresas(id_empresa, id_tecnologia) VALUES (2 , 2);
